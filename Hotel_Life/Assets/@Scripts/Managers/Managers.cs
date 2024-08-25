@@ -15,10 +15,14 @@ public class Managers : MonoBehaviour
     #region Core
     private SoundManager _sound = new SoundManager();
 	private ResourceManager _resource = new ResourceManager();
-	//private UIManager _uiManager = new UIManager;
-	//private DataManager _dataManager = new DataManager;
+	private SceneManagerEx _sceneEx = new SceneManagerEx();
+	private UIManager _ui = new UIManager();
+	private DataManager _data = new DataManager();
 	public static ResourceManager Resource { get { return Instance?._resource; } }
 	public static SoundManager Sound { get { return Instance?._sound; } }
+	public static SceneManagerEx Scene { get { return Instance?._sceneEx; } }
+	public static UIManager UI { get { return Instance?._ui; } }
+	public static DataManager Data { get { return Instance?._data; } }
 	#endregion
 	public static void Init()
 	{
@@ -35,6 +39,7 @@ public class Managers : MonoBehaviour
 
 			// ÃÊ±âÈ­
 			s_instance = go.GetComponent<Managers>();
+			
 		}
 	}
 }

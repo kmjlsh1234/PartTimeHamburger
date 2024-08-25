@@ -6,6 +6,18 @@ using UnityEngine;
 public class GameManager
 {
     #region Player
+    public Transform Player
+    {
+        get
+        {
+            if (player == null)
+                player = GameObject.FindGameObjectWithTag("Player").transform;
+
+            return player;
+        }
+    }
+
+    private Transform player;
     public Vector2 _moveDir;
     public Vector2 MoveDir
     {

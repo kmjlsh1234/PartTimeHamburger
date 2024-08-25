@@ -15,6 +15,7 @@ namespace SojaExiles
 		void Start()
 		{
 			open = false;
+			Player = Managers.Game.Player;
 		}
 
 		void OnMouseOver()

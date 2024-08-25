@@ -28,7 +28,7 @@ public class PlayerController : InitBase
         float z = Input.GetAxis("Vertical");       
 #else
         float x = Managers.Game.MoveDir.x;
-        float z = Managers.Game.MoveDir.z;
+        float z = Managers.Game.MoveDir.y;
 #endif
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
