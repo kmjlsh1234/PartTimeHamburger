@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomerFactory
+public class CustomerFactory : MonoBehaviour
 {
-    public static Customer CreateCustomer(Define.ECustomerType type)
+    public static GameObject CreateCustomer(Define.ECustomerType type)
     {
-        Customer customer = null;
+        GameObject customer = null;
 
         switch(type)
         {
             case Define.ECustomerType.Normal:
-                customer = new NormalCustomer();
+                customer = Managers.Resource.Load<GameObject>("Customer_Normal_01");
                 //나중에 어드레서블로 Instantiate
                 break;
             case Define.ECustomerType.Enemy:
-                customer = new NormalCustomer();
+                
                 //나중에 어드레서블로 Instantiate
                 break;
         }

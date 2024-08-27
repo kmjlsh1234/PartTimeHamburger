@@ -14,7 +14,7 @@ public class DataManager
 
     public void Init()
     {
-        //CustomerDic = LoadJson<Data.CustomerDataLoader, int, Data.CustomerData>("CustomerData").MakeDict();
+        CustomerDic = LoadJson<Data.CustomerDataLoader, int, Data.CustomerData>("CustomerData").MakeDict();
     }
 
     private Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>

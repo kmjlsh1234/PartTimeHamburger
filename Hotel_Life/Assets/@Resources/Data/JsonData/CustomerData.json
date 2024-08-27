@@ -1,0 +1,52 @@
+{
+  "CustomDataList": [
+    {
+      "PID": 0,
+      "CustomerType": "Normal",
+      "Pointer": 1,
+      "X": -33.0,
+      "Y": 0.0,
+      "Z": -33.0
+    },
+    {
+      "PID": 1,
+      "CustomerType": "Normal",
+      "Pointer": 2,
+      "X": -2.5,
+      "Y": 0.0,
+      "Z": -33.0
+    },
+    {
+      "PID": 2,
+      "CustomerType": "Normal",
+      "Pointer": 3,
+      "X": -2.5,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    {
+      "PID": 3,
+      "CustomerType": "Normal",
+      "Pointer": 4,
+      "X": -2.5,
+      "Y": 0.0,
+      "Z": 3.0
+    },
+    {
+      "PID": 4,
+      "CustomerType": "Normal",
+      "Pointer": 5,
+      "X": -1.0,
+      "Y": 0.0,
+      "Z": 12.0
+    },
+    {
+      "PID": 5,
+      "CustomerType": "Normal",
+      "Pointer": 6,
+      "X": -2.0,
+      "Y": 0.0,
+      "Z": 16.0
+    }
+  ]
+}

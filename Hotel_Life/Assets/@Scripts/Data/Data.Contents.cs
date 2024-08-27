@@ -8,10 +8,12 @@ namespace Data
     [System.Serializable]
     public class CustomerData
     {
-        public int ID;
-        public string CustomerName;
-        public Define.ECustomerType CustomerType;
-        public float Speed;
+        public int PID;
+        public string CustomerType;
+        public int Pointer;
+        public float X;
+        public float Y;
+        public float Z;
     }
 
     [System.Serializable]
@@ -23,7 +25,7 @@ namespace Data
         {
             Dictionary<int, CustomerData> dict = new Dictionary<int, CustomerData>();
             foreach (CustomerData data in CustomDataList)
-                dict.Add(data.ID, data);
+                dict.Add(data.PID, data);
             return dict;
         }
     }
