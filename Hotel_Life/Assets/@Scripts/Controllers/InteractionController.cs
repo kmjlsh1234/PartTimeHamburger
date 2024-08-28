@@ -1,6 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Define;
+
+public enum AnimState
+{
+    Attack,
+    Work,
+}
 
 public class InteractionController : MonoBehaviour
 {
@@ -16,7 +23,7 @@ public class InteractionController : MonoBehaviour
             SwitchState(weaponState);
         }
     }
-    Define.EWeaponState weaponState = Define.EWeaponState.Scanner;
+    EWeaponState weaponState = EWeaponState.Scanner;
     Animator _anim;
     Ray ray;
     RaycastHit hit;
@@ -40,10 +47,10 @@ public class InteractionController : MonoBehaviour
         }
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Alpha1))
-            WeaponState = Define.EWeaponState.Scanner;
+            WeaponState = EWeaponState.Scanner;
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
-            WeaponState = Define.EWeaponState.Bat;
+            WeaponState = EWeaponState.Bat;
 #else
         
 #endif
@@ -59,14 +66,14 @@ public class InteractionController : MonoBehaviour
         }
     }
 
-    private void SwitchState(Define.EWeaponState state)
+    private void SwitchState(EWeaponState state)
     {
         switch(state)
         {
-            case Define.EWeaponState.Scanner:
+            case EWeaponState.Scanner:
                 _weapon.SetActive(false);
                 break;
-            case Define.EWeaponState.Bat:
+            case EWeaponState.Bat:
                 _weapon.SetActive(true);
                 break;
         }
@@ -76,12 +83,12 @@ public class InteractionController : MonoBehaviour
     {
         switch(weaponState)
         {
-            case Define.EWeaponState.Scanner:
-                _anim.SetTrigger("Work");
+            case EWeaponState.Scanner:
+                _anim.SetTrigger(AnimState.Work.ToString());
                 break;
-            case Define.EWeaponState.Bat:
-                Managers.Sound.Play(Define.ESound.Effect, "SFX_BatSwing");
-                _anim.SetTrigger("Attack");
+            case EWeaponState.Bat:
+                Managers.Sound.Play(ESound.Effect, "SFX_BatSwing");
+                _anim.SetTrigger(AnimState.Attack.ToString());
                 break;
         }
     }

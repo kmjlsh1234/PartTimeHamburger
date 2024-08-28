@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0025381644, g: 0.005018009, b: 0.020608312, a: 1}
+  m_IndirectSpecularColor: {r: 0.0025375565, g: 0.0050171274, b: 0.020604635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -478,7 +478,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1694949343}
   - component: {fileID: 1694949345}
-  - component: {fileID: 1694949344}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -501,18 +500,6 @@ Transform:
   m_Father: {fileID: 678910913}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1694949344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694949342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 953b0b6f736f3fe47a1d067f7a358fc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &1694949345
 Light:
   m_ObjectHideFlags: 0
